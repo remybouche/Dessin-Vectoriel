@@ -1,21 +1,26 @@
-#include "line.h"
+#include "Rectangle.h"
 
-Line::Line(){
+Rectangle::Rectangle(){
     Shape();
-    setXY2(0, 0);
+    setLength(10);
+    setHeigth(10);
 }
 
-Line::Line(int _X, int _Y, int _X2, int _Y2, int _r, int _g, int _b, char _alpha){
+Rectangle::Rectangle(int _X, int _Y, int _length, int _heigth, int _r, int _g, int _b, char _alpha){
     Shape(_X, _Y, _r, _g, _b, _alpha);
-    setXY2(_X2, _Y2);
+    setLength(_length);
+    setHeigth(_heigth);
 
 }
 
-Line::~Line(){
+Rectangle::~Rectangle(){
 
 }
 
-void Line::setXY2(int _X2, int _Y2){
-    X2 = _X2;
-    Y2 = _Y2;
+void Rectangle::setLength(int _length){
+    length = _length;
+}
+
+void Rectangle::setHeigth(int _heigth){
+    length = _heigth;
 }
