@@ -34,7 +34,7 @@ int main(int argc, char * argv[]) {
 	CPixel *p = img->getPixel(10, 10);
 	p->Red( 255 );
     p->Green( 255 );
-    p->Blue( 0 );
+    p->Blue( 255 );
 
 	cout << "(II) CBitmap image saving" << endl;
 	image->SaveBMP(filename2);
