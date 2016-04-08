@@ -1,14 +1,13 @@
 #include "shape.h"
 
 Shape::Shape(){
-    setX(0);
-    setY(0);
+    setXY(0, 0);
     color = CPixel();
     setAlpha(0);
 }
 
 
-Shape::Shape(int _X, int_Y, int _r, int _g, int _b, char _alpha){
+Shape::Shape(int _X, int _Y, int _r, int _g, int _b, char _alpha){
     setXY(_X, _Y);
     color = CPixel(_r, _g, _b);
     setAlpha(_alpha);
@@ -18,7 +17,7 @@ Shape::~Shape(){
 
 }
 
-void Shape::setXY(int _X, int_Y){
+void Shape::setXY(int _X, int _Y){
     X = _X;
     Y = _Y;
 }

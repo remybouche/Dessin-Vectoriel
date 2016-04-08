@@ -17,7 +17,7 @@ protected:
 public:
     // Constructors
     Shape();
-    Shape(int _X, int_Y, int _r, int _g, int _b, char _alpha);
+    Shape(int _X, int _Y, int _r, int _g, int _b, char _alpha);
     ~Shape();
 
     // Getters
