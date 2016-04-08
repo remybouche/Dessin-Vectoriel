@@ -40,6 +40,7 @@ int main(int argc, char * argv[]) {
 	image->SaveBMP(filename2);
 
     // test master
+    // test masterj
 
 	return 1;
 
