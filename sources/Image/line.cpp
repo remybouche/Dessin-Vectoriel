@@ -1,4 +1,4 @@
-#include "ligne.h"
+#include "line.h"
 
 Ligne::Ligne(){
     setCoordinate({0,0});
