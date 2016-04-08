@@ -1,30 +1,21 @@
-#include "ligne.h"
+#include "line.h"
 
-Ligne::Ligne(){
-    setCoordinate({0,0});
-    setEndCoordinate({0,0});
-    color = CPixel(); // setColor à 0,0,0
-    setTransparency(0);
-    setScale(1);
+Line::Line(){
+    Shape::Shape();
+    setXY2(0, 0);
 }
 
-Ligne::Ligne(struct Coordinate _coordinate, struct Coordinate _endCoordinate, int _r, int _g, int _b, char _transparency, int _scale){
-    setCoordinate(_coordinate);
-    setEndCoordinate(_endCoordinate);
-    color = CPixel(_r, _g, _b);; // setColorCPixel::RGB(int r, int g, int b)
-    setTransparency(_transparency);
-    setScale(_scale);
-}
-
-Ligne::~Ligne(){
+Line::Line(int _X, int _Y, int X2, int Y2, int _r, int _g, int _b, char _alpha){
+    Shape::Shape(_X, _Y, _r, _g, _b, _alpha);
+    setXY2(_X2, _Y2);
 
 }
 
-void Ligne::setEndCoordinate(struct Coordinate _endCoordinate){
-    endCoordinate.x = _endCoordinate.x;
-    endCoordinate.y = _endCoordinate.y;
+Line::~Line(){
+
 }
 
-int Ligne::caculateLength(){
-
+void Line::setXY2(int _X2, int _Y2){
+    X2 = _X2;
+    Y2 = _Y2;
 }

@@ -1,51 +1,45 @@
 #include "shape.h"
 
 Shape::Shape(){
-    setCoordinate({0,0});
-    color = CPixel(); // setColor à 0,0,0
-    setTransparency(0);
-    setScale(1);
+    setX(0);
+    setY(0);
+    color = CPixel();
+    setAlpha(0);
 }
 
-Shape::Shape(struct Coordinate _coordinate, int _r, int _g, int _b, char _transparency, int _scale){
-    setCoordinate(_coordinate);
-    color = CPixel(_r, _g, _b); // setColorCPixel::RGB(int r, int g, int b)
-    setTransparency(_transparency);
-    setScale(_scale);
+
+Shape::Shape(int _X, int_Y, int _r, int _g, int _b, char _alpha){
+    setXY(_X, _Y);
+    color = CPixel(_r, _g, _b);
+    setAlpha(_alpha);
 }
 
 Shape::~Shape(){
 
 }
 
-void Shape::setCoordinate(struct Coordinate _coordinate){
-    coordinate.x = _coordinate.x;
-    coordinate.y = _coordinate.y;
+void Shape::setXY(int _X, int_Y){
+    X = _X;
+    Y = _Y;
 }
 
 
-void Shape::setTransparency(char _transparency){
-    transparency = (_transparency>100)?100:_transparency;
-    transparency = (transparency>=0)?transparency:0;
+void Shape::setAlpha(char _alpha){
+    alpha = (_alpha>100)?100:_alpha;
+    alpha = (alpha<0)?0:alpha;
 }
 
-void Shape::applyTransparency(){
 
+int Shape::getX(){
+    return(X);
 }
 
-void Shape::setScale(int _scale){
-    scale = (_scale>10)?10:_scale;
-    scale = (scale>=1)?scale:1;
+int Shape::getY(){
+    return(Y);
 }
 
-struct Coordinate Shape::getCoordinate(){
-    return(coordinate);
+
+char Shape::getAlpha(){
+    return(alpha);
 }
 
-char Shape::getTransparency(){
-    return(transparency);
-}
-
-int Shape::getScale(){
-    return(scale);
-}
