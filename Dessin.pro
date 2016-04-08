@@ -16,7 +16,8 @@ SOURCES += sources/main.cpp \
     sources/Image/CPixel.cpp \
     sources/Image/line.cpp \
     sources/Image/rectangle.cpp \
-    sources/Image/shape.cpp
+    sources/Image/shape.cpp \
+    sources/Image/circle.cpp
 
 HEADERS += \
     sources/Format/CBitmap.h \
@@ -25,7 +26,8 @@ HEADERS += \
     sources/Image/CPixel.h \
     sources/Image/line.h \
     sources/Image/rectangle.h \
-    sources/Image/shape.h
+    sources/Image/shape.h \
+    sources/Image/circle.h
 
 
 
