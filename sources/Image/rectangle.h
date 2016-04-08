@@ -1,10 +1,9 @@
-#ifndef RETANGLE_H
-#define RETANGLE_H
+#ifndef RECTANGLE_H
+#define RECTANGLE_H
 
 
 
 
 
+#endif // RECTANGLE_H
 
-
-#endif // RETANGLE_H

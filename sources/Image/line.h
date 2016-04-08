@@ -1,27 +1,28 @@
-#ifndef LIGNE_H
-#define LIGNE_H
+#ifndef LINE_H
+#define LINE_H
 
 #include <iostream>
-#include "Cligne.h"
 #include "shape.h"
 
-class Ligne : public Shape{
+class Line : public Shape{
 
 private:
-    Coordinate endCoordinate;
+    int X2;
+    int Y2;
 
 public:
-    Ligne();
-    Ligne(struct Coordinate _coordinate, struct Coordinate _endCoordinate, int _r, int _g, int _b, char _transparency, int _scale);
-    ~Ligne();
+    // Constructors
+    Line();
+    Line(int _X, int _Y, int X2, int Y2, int _r, int _g, int _b, char _alpha);
+    ~Line();
 
-    struct Coordinate getEndCoordinate();
-    void setEndCoordinate(struct Coordinate _endCoordinate);
+    // Setters
+    void setXY2(int _X2, int _Y2);
 
-    int caculateLength();
+    // Getters
+    int getX2();
+    int getY2();
 };
 
 
-
-
-#endif // LIGNE_H
+#endif

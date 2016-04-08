@@ -1,46 +1,34 @@
 #ifndef SHAPE_H
 #define SHAPE_H
 
-
 #include <iostream>
 #include "CPixel.h"
 
-
 using namespace std;
 
-struct Coordinate
-{
-    int x; // double
-    int y;
-};
-
-
 class Shape{
+
 protected:
-    Coordinate coordinate;
-    CPixel color; // user chooses RGV
-    char transparency;
-    int scale;
+    int X;
+    int Y;
+    CPixel color; // RGB triplet
+    char alpha; // Transparency : 0-100
 
 public:
+    // Constructors
     Shape();
-    Shape(struct Coordinate _coordinate, int _r, int _g, int _b, char _transparency, int _scale);
-
+    Shape(int _X, int _Y, int _r, int _g, int _b, char _alpha);
     ~Shape();
 
-    struct Coordinate getCoordinate();
-    void setCoordinate(struct Coordinate _coordinate);
+    // Getters
+    int getX();
+    int getY();
+    char getAlpha();
 
-    // set et get de CPixel
-
-    char getTransparency();
-    void setTransparency(char _transparency);
-    void applyTransparency();
-
-    int getScale();
-    void setScale(int _scale);
+    // Setters
+    void setXY(int _X, int _Y);
+    void setAlpha(char _alpha);
 
 };
 
-
-#endif // SHAPE_H
+#endif
