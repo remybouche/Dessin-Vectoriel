@@ -39,6 +39,8 @@ int main(int argc, char * argv[]) {
 	cout << "(II) CBitmap image saving" << endl;
 	image->SaveBMP(filename2);
 
+    // test master
+
 	return 1;
 
     return a.exec();
