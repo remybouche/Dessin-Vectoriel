@@ -4,6 +4,8 @@
 #include <iostream>
 #include "shape.h"
 
+using namespace std;
+
 class Circle : public Shape{
 
 private:
@@ -21,12 +23,6 @@ public:
     // Getters
     int getRadius();
 };
-
-
-
-
-
-
 
 
 #endif // CIRCLE_H

@@ -1,5 +1,6 @@
 #include "rectangle.h"
 
+
 Rectangle::Rectangle(){
     Shape();
     setLength(10);
@@ -22,5 +23,26 @@ void Rectangle::setLength(int _length){
 }
 
 void Rectangle::setHeigth(int _heigth){
-    length = _heigth;
+    heigth = _heigth;
+}
+
+void Rectangle::showRectangle(CImage *_image){
+    int i;
+    int j;
+    /*for(j=Y;j<Y+heigth;j++){
+        for(i=X;i<X+length;i++){
+            CPixel *p = _image->getPixel(i, j);
+               p->Red(color.Red());
+               p->Green(color.Green());
+               p->Blue(color.Blue());
+        }*/
+    for(j=10;j<10+50;j++){
+        for(i=10;i<10+80;i++){
+            CPixel *p = _image->getPixel(i, j);
+                   p->Red( 255 );
+                   p->Green( 0 );
+                   p->Blue( 0 );
+    }
+    }
+
 }

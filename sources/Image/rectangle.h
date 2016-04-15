@@ -3,6 +3,9 @@
 
 #include <iostream>
 #include "shape.h"
+#include "CImage.h"
+
+using namespace std;
 
 class Rectangle : public Shape{
 
@@ -24,9 +27,11 @@ public:
     // Getters
     int getHeigth();
     int getLength();
+
+    //
+    void showRectangle(CImage *_image);
 };
 
 
-#endif
 
-
+#endif // RECTANGLE_H

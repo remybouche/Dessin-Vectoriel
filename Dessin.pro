@@ -25,9 +25,9 @@ HEADERS += \
     sources/Image/CLigne.h \
     sources/Image/CPixel.h \
     sources/Image/line.h \
-    sources/Image/rectangle.h \
     sources/Image/shape.h \
-    sources/Image/circle.h
+    sources/Image/circle.h \
+    sources/Image/rectangle.h
 
 
 
