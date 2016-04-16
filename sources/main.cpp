@@ -40,7 +40,7 @@ int main(int argc, char * argv[]) {
     Rectangle *test = new Rectangle(10, 20, 30, 40, 255, 0, 0, 100);
     Circle *test2 = new Circle(50, 70, 30, 0, 255, 0, 100);
     Line *test3 = new Line(90, 70, 200, 240, 0, 0, 255, 100);
-    Circle *test4 = new Circle(50, 70, 30, 0, 255, 0, 50);
+    Circle *test4 = new Circle(50, 70, 40, 0, 255, 0, 50);
 
 
 //    cout << test->getX() << " " << test->getY() << endl;
