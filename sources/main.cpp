@@ -31,12 +31,7 @@ int main(int argc, char * argv[]) {
 
     cout << "(II) CImage pointer extraction" << endl;
     CImage   *img = image->getImage();
-    CLigne   *lin = img->getLigne(2);
 
-    int h = img->size();
-    int l = lin->size();
-    cout << "hauteur : " << h << endl;
-    cout << "largeur : " << l << endl;
 
    //cout << "(II) creation d'une image vierge" << endl;
    //CImage *img = new CImage(256, 256);
@@ -49,11 +44,14 @@ int main(int argc, char * argv[]) {
 
 
     // test des showShapes()
-    Circle *circle1 = new Circle(130,50,100,255,0,0,100);
+    Line *line1 = new Line(2,2,25,50,255,0,0,100); // cas non fait pour coeff négatif ou infini
+    //Circle *circle1 = new Circle(130,50,100,255,0,0,100);
     //Rectangle *rectangle1 = new Rectangle(30,30,200,60,255,255,0,100);
 
     //rectangle1->showRectangle(img);
-    circle1->showCircle(img);
+    //circle1->showCircle(img);
+    line1->showLine(img);
+
 
     cout << "(II) CBitmap image saving" << endl;
 	image->SaveBMP(filename2);
