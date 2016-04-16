@@ -1,13 +1,9 @@
 #ifndef LINE_H
 #define LINE_H
 
+#include "CImage.h"
 #include <iostream>
 #include "shape.h"
-
-#include "CImage.h"
-#include <math.h>
-
-using namespace std;
 
 class Line : public Shape{
 
@@ -28,7 +24,13 @@ public:
     int getX2();
     int getY2();
 
-    void showLine(CImage *_image);
+    //Others
+    void draw(CImage *img);
+    void check();
+    int min(int a, int b);
+    int max(int a, int b);
+    int interpolate(int x);
+
 };
 
 

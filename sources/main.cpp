@@ -10,11 +10,6 @@ using namespace std;
 
 #include "./Format/CBitmap.h"
 
-#include "./Image/rectangle.h"
-#include "./Image/line.h"
-#include "./Image/circle.h"
-
-
 int main(int argc, char * argv[]) {
 
     QCoreApplication a(argc, argv);
@@ -23,38 +18,49 @@ int main(int argc, char * argv[]) {
 
 	cout << "(II) CBitmap object creation" << endl;
 	CBitmap *image   = new CBitmap();
-    string filename  = "Entree.bmp";
-    string filename2 = "Sortie.bmp";
+	string filename  = "Entree.bmp";
+	string filename2 = "Sortie.bmp";
 
-    cout << "(II) CBitmap image loading" << endl;
-    image->LoadBMP( filename );
+	cout << "(II) CBitmap image loading" << endl;
+	image->LoadBMP( filename );
 
-    cout << "(II) CImage pointer extraction" << endl;
-    CImage   *img = image->getImage();
+	cout << "(II) CImage pointer extraction" << endl;
+	CImage   *img = image->getImage(); //new CImage(size, size);
 
-
-   //cout << "(II) creation d'une image vierge" << endl;
-   //CImage *img = new CImage(256, 256);
+	// POUR CREER UNE IMAGE VIERGE NOUS AURIONS ECRIRE
+	// 	CImage *img = new CImage(hauteur, largeur);
 
 	// ON PASSE UN PIXEL A LA COULEUR ROUGE
-   //CPixel *p = img->getPixel(10, 10);
-   // p->Red( 255 );
-   // p->Green( 255 );
-   // p->Blue( 255 );
+
+	CPixel *p = img->getPixel(10, 10);
+	p->Red( 255 );
+    p->Green( 255 );
+    p->Blue( 255 );
+
+    Rectangle *test = new Rectangle(10, 20, 30, 40, 255, 0, 0, 100);
+    Circle *test2 = new Circle(50, 70, 30, 0, 255, 0, 100);
+    Line *test3 = new Line(90, 70, 200, 240, 0, 0, 255, 100);
+    Circle *test4 = new Circle(50, 70, 30, 0, 255, 0, 50);
 
 
-    // test des showShapes()
-    Line *line1 = new Line(2,2,25,50,255,0,0,100); // cas non fait pour coeff négatif ou infini
-    //Circle *circle1 = new Circle(130,50,100,255,0,0,100);
-    //Rectangle *rectangle1 = new Rectangle(30,30,200,60,255,255,0,100);
+//    cout << test->getX() << " " << test->getY() << endl;
+    //test->setLength(20);
+    //test->setHeigth(20);
+    //test->setXY(10, 10);
+    test->check();
+    test->draw(img);
+    //test2->check();
+    //test2->draw(img);
+    test3->check();
+    test3->draw(img);
+    test4->check();
+    test4->drawTransparency(img);
 
-    //rectangle1->showRectangle(img);
-    //circle1->showCircle(img);
-    line1->showLine(img);
-
-
-    cout << "(II) CBitmap image saving" << endl;
+	cout << "(II) CBitmap image saving" << endl;
 	image->SaveBMP(filename2);
+
+    // test master
+    // test masterj
 
 	return 1;
 

@@ -3,7 +3,6 @@
 
 #include <iostream>
 #include "CPixel.h"
-#include <assert.h>
 
 using namespace std;
 
@@ -24,12 +23,14 @@ public:
     // Getters
     int getX();
     int getY();
-    char getAlpha();
+    short getAlpha();
 
     // Setters
     void setXY(int _X, int _Y);
-    void setAlpha(char _alpha);
+    void setAlpha(short _alpha);
 
+    //Others
+    void check();
 };
 
 #endif

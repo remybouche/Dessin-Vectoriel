@@ -14,6 +14,11 @@
 using namespace std;
 
 #include "CLigne.h"
+#include "circle.h"
+#include "rectangle.h"
+#include "line.h"
+#include "shape.h"
+
 
 #ifndef CIMAGE_H_
 #define CIMAGE_H_

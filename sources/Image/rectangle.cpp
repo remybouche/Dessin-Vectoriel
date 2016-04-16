@@ -2,24 +2,30 @@
 
 
 Rectangle::Rectangle(){
-    //Shape(); enfaite on peut pas hériter des constructeurs et desstructeurs
-    setXY(0, 0);
-    color = CPixel();
-    setAlpha(0);
-
+    Shape();
     setLength(10);
     setHeigth(10);
 }
 
+/*
 Rectangle::Rectangle(int _X, int _Y, int _length, int _heigth, int _r, int _g, int _b, char _alpha){
-    //Shape(_X, _Y, _r, _g, _b, _alpha);
-    setXY(_X, _Y);
-    color = CPixel(_r, _g, _b);
-    setAlpha(_alpha);
-
+    Shape(_X, _Y, _r, _g, _b, _alpha);
     setLength(_length);
     setHeigth(_heigth);
+
 }
+*/
+
+
+
+Rectangle::Rectangle(int _X, int _Y, int _length, int _heigth, int _r, int _g, int _b, char _alpha) : Shape(_X, _Y, _r, _g, _b, _alpha){
+    Shape(_X, _Y, _r, _g, _b, _alpha);
+    setLength(_length);
+    setHeigth(_heigth);
+
+}
+
+
 
 Rectangle::~Rectangle(){
 
@@ -34,23 +40,28 @@ void Rectangle::setHeigth(int _heigth){
 }
 
 int Rectangle::getLength(){
-    return(length);
+    return length;
 }
 
 int Rectangle::getHeigth(){
-    return(heigth);
+    return heigth;
 }
 
-void Rectangle::showRectangle(CImage *_image){
-    int i;
-    int j;
+void Rectangle::draw(CImage *img){
+    int i, j;
+    for (j = Y; j<(heigth+Y); j++){
+        for (i = X; i<(length+X); i++){
+            CPixel *p = img->getPixel(i, j);
+            *p = color;
 
-    for(j=Y;j<Y+heigth;j++){
-        for(i=X;i<X+length;i++){
-            CPixel *p = _image->getPixel(i, j);
-               p->Red(color.Red());
-               p->Green(color.Green());
-               p->Blue(color.Blue());
         }
     }
+}
+
+
+void Rectangle::check(){
+    cout << "---------- RECTANGLE PARAMETERS ----------" << endl;
+    cout << "Size: " << getLength() << "*" << getHeigth() << " (length, heigth)" << endl;
+    cout << "Position: " << Shape::getX() << "*" << getY() << " (X,Y)" << endl;
+    cout << "------------------------------------------" << endl;
 }

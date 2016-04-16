@@ -1,12 +1,9 @@
 #ifndef CIRCLE_H
 #define CIRCLE_H
 
+#include "CImage.h"
 #include <iostream>
 #include "shape.h"
-
-#include "CImage.h"
-
-using namespace std;
 
 class Circle : public Shape{
 
@@ -25,8 +22,18 @@ public:
     // Getters
     int getRadius();
 
-    void showCircle(CImage *_image);
+    //Others
+    void check();
+    void draw(CImage *img);
+    void drawTransparency(CImage *img);
+
 };
+
+
+
+
+
+
 
 
 #endif // CIRCLE_H

@@ -18,12 +18,12 @@ Shape::~Shape(){
 }
 
 void Shape::setXY(int _X, int _Y){
-    X = (_X>=0)?_X:-_X;
-    Y = (_Y>=0)?_Y:-_Y;
+    X = _X;
+    Y = _Y;
 }
 
 
-void Shape::setAlpha(char _alpha){
+void Shape::setAlpha(short _alpha){
     alpha = (_alpha>100)?100:_alpha;
     alpha = (alpha<0)?0:alpha;
 }
@@ -38,7 +38,14 @@ int Shape::getY(){
 }
 
 
-char Shape::getAlpha(){
+short Shape::getAlpha(){
     return(alpha);
+}
+
+void Shape::check(){
+    cout << "------**---- SHAPE PARAMETERS ------------" << endl;
+    cout << "Position: " << getX() << "*" << getY() << " (X,Y)" << endl;
+    cout << "Color: " << getAlpha() << "*" << color.Red() << "*" << color.Green() << "*" << color.Blue() << " (Alpha,R,G,B)" << endl;
+    cout << "------------------------------------------" << endl;
 }
 

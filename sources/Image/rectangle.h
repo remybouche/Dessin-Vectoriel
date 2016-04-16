@@ -1,11 +1,9 @@
 #ifndef RECTANGLE_H
 #define RECTANGLE_H
 
+#include "CImage.h"
 #include <iostream>
 #include "shape.h"
-#include "CImage.h"
-
-using namespace std;
 
 class Rectangle : public Shape{
 
@@ -23,15 +21,15 @@ public:
     void setLength(int _length);
     void setHeigth(int _heigth);
 
-
     // Getters
     int getHeigth();
     int getLength();
 
-    //
-    void showRectangle(CImage *_image);
+    //Others
+    void draw(CImage *img);
+    void check();
 };
 
+#endif
 
 
-#endif // RECTANGLE_H
