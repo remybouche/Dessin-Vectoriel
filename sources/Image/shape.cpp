@@ -18,8 +18,8 @@ Shape::~Shape(){
 }
 
 void Shape::setXY(int _X, int _Y){
-    X = _X;
-    Y = _Y;
+    X = (_X>=0)?_X:-_X;
+    Y = (_Y>=0)?_Y:-_Y;
 }
 
 

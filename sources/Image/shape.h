@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "CPixel.h"
+#include <assert.h>
 
 using namespace std;
 

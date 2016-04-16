@@ -4,6 +4,8 @@
 #include <iostream>
 #include "shape.h"
 
+#include "CImage.h"
+
 using namespace std;
 
 class Circle : public Shape{
@@ -22,6 +24,8 @@ public:
 
     // Getters
     int getRadius();
+
+    void showCircle(CImage *_image);
 };
 
 

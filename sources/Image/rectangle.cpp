@@ -44,15 +44,6 @@ int Rectangle::getHeigth(){
 void Rectangle::showRectangle(CImage *_image){
     int i;
     int j;
-   /* for(j=Rectangle::getY();j<Rectangle::getY()+heigth;j++){
-        for(i=Rectangle::getX();i<Rectangle::getX()+length;i++){
-            CPixel *p = _image->getPixel(i, j);
-               p->Red(color.Red());
-               p->Green(color.Green());
-               p->Blue(color.Blue());
-        }
-    }
-    */
 
     for(j=Y;j<Y+heigth;j++){
         for(i=X;i<X+length;i++){
