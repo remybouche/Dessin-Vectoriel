@@ -42,29 +42,16 @@ int main(int argc, char * argv[]) {
    // p->Green( 255 );
    // p->Blue( 255 );
 
-    //int i;
-    //int j;
-    //for(j=10;j<10+50;j++){
-        //for(i=10;i<10+80;i++){
-            //CPixel *p = img->getPixel(i, j);
-               //p->Red( 255 );
-               //p->Green( 0 );
-               //p->Blue( 0 );
-        //}
-    //}
 
     // test des showShapes()
     //Shape *shape1 = new Shape(10,10,255,0,0,100);
     Circle *circle1 = new Circle(10,10,20,255,0,0,100);
-    Rectangle *rectangle1 = new Rectangle(10,10,30,40,255,0,0,100);
+    Rectangle *rectangle1 = new Rectangle(80,80,200,60,255,255,0,100);
 
     rectangle1->showRectangle(img);
 
     cout << "(II) CBitmap image saving" << endl;
 	image->SaveBMP(filename2);
-
-    // test master
-    // test masterj
 
 	return 1;
 
